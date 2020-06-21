@@ -249,7 +249,7 @@ map.on('locationfound', onLocationFound);
 
 	
   var popup = L.popup();
-
+ 
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
