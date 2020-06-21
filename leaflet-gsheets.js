@@ -274,9 +274,10 @@ function onMapClick(e) {
 mymap.on('click', onMapClick);
 
 
-
+var mydistance = getDistance([37, -120], [39, -100])
  function getDistance(origin, destination) 
     {
+	//return distance in meters
         var lon1 = toRadian(origin[1]),
         lat1 = toRadian(origin[0]),
         lon2 = toRadian(destination[1]),
@@ -294,5 +295,6 @@ function toRadian(degree)
     {
         return degree*Math.PI/180;
     }
+alert("Test  " +mydistance);
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
