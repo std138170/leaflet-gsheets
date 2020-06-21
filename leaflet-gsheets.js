@@ -171,13 +171,13 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	  //  var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	 //   alert("Έξω από το if");
-	  //  if (distance < 10000000000000000000000000000000000000000000000 )
-	  //  {
-		  //  alert("Μέσα στο if");
+	   var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
+	    alert("Έξω από το if");
+	   if (distance < 1 )
+	    {
+		    alert("Μέσα στο if");
      		 marker = L.marker([data[row].lat, data[row].lon]);
-	    //}
+	    }
     }
     marker.addTo(pointGroupLayer);
 
@@ -238,7 +238,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -262,8 +262,8 @@ var myIcon = L.icon({
 map.on('locationfound', onLocationFound);
 
 	
-alert("Test   2  ");
-var mydistance = getDistance([37, -120], [39, -100]);
+//alert("Test   2  ");
+//var mydistance = getDistance([37, -120], [39, -100]);
  function getDistance(origin, destination) 
     {
 alert("Test 3 ");
@@ -285,6 +285,6 @@ function toRadian(degree)
     {
         return degree*Math.PI/180;
     }
-alert("Test 4 " +mydistance);
+//alert("Test 4 " +mydistance);
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
