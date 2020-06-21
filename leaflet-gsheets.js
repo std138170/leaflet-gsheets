@@ -152,7 +152,7 @@ function addPoints(data) {
  
   //////XXXXXXXXXXXXXXXXX
   var myIcon = L.icon({
-    iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png'});
+    iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/myicon.png'});
     //shadowUrl: 'leaf-shadow.png',
 
     //iconSize: [38, 95] }); // size of the icon
@@ -247,21 +247,16 @@ Colosseum.addTo(map);
 map.on('locationfound', onLocationFound);
 
 	
-    function onMapClick(e) 
-    {
-        popup.setLatLng(e.latlng);
-        var coords = e.latlng;
-        addMarker(coords);
-    }
-    
-    map.on('click', onMapClick);
-    function addMarker(coordinates)
-    {
-      
-      var newClickCoords = L.marker([coordinates.lat,coordinates.lng]).bindPopup("New");
-	    newClickCoords.addTo(map);
-        
-    }
+  var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
