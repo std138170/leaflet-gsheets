@@ -163,7 +163,7 @@ function addPoints(data) {
 //});
   
   ///////XXXXXXXXXXXXXXXXx
-
+alert("Ασχετο");
   for (var row = 0; row < data.length; row++) {
     var marker;
     if (markerType == "circleMarker") {
@@ -238,7 +238,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
