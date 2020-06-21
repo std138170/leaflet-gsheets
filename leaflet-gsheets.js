@@ -237,5 +237,12 @@ function onLocationFound(e) {
 
 map.on('locationfound', onLocationFound);
 
+ function onMapClick(e) 
+    {
+        popup.setLatLng(e.latlng);
+        var coords = e.latlng;
+        addMarker(coords);
+    }
+
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
