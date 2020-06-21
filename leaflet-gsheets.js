@@ -163,7 +163,7 @@ function addPoints(data) {
 //});
   
   ///////XXXXXXXXXXXXXXXXx
-alert("Ασχετο");
+//alert("Ασχετο");
   for (var row = 0; row < data.length; row++) {
     var marker;
     if (markerType == "circleMarker") {
@@ -171,11 +171,11 @@ alert("Ασχετο");
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	    var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	    alert("Έξω από το if");
+	  //  var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
+	 //   alert("Έξω από το if");
 	  //  if (distance < 10000000000000000000000000000000000000000000000 )
 	  //  {
-		    alert("Μέσα στο if");
+		  //  alert("Μέσα στο if");
      		 marker = L.marker([data[row].lat, data[row].lon]);
 	    //}
     }
@@ -238,7 +238,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are ΑΑΑΑ " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -273,14 +273,7 @@ function onMapClick(e) {
 
 mymap.on('click', onMapClick);
 
-var overlays = 
-        {
-            "Όλες οι πινέζες": allMarkers,
-            "Η τοποθεσία μου": myloc,
-            "Πινέζες κοντά μου": MarkersNearMe,
-            "Αξιοθέατα": Sights
-	};
-                L.control.layers(baseLayers, overlays).addTo(map);
+
 
  function getDistance(origin, destination) 
     {
