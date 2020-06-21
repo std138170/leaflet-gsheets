@@ -198,8 +198,9 @@ function addPoints(data) {
 
     // AwesomeMarkers is used to create fancier icons
     var icon = L.AwesomeMarkers.icon({
-      icon: "info-sign",
-      iconColor: "white",
+      iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png',
+     // icon: "info-sign",
+      iconColor: "green",
       markerColor: getColor(data[row].category),
       prefix: "glyphicon",
       extraClasses: "fa-rotate-0"
