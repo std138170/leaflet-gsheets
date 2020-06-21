@@ -171,7 +171,7 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-      marker = L.marker([data[row].lat, data[row].lon], {icon: myIcon});
+      marker = L.marker([data[row].lat, data[row].lon]);
     }
     marker.addTo(pointGroupLayer);
 
@@ -199,7 +199,7 @@ function addPoints(data) {
     // AwesomeMarkers is used to create fancier icons
     var icon = L.AwesomeMarkers.icon({
       icon: "info-sign",
-      iconColor: "blue",
+      iconColor: "green",
       markerColor: getColor(data[row].category),
       prefix: "glyphicon",
       extraClasses: "fa-rotate-0"
