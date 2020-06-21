@@ -172,7 +172,7 @@ function addPoints(data) {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
 	    var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	    if (distance < 1 )
+	    if (distance < e.accuracy )
 	    {
      		 marker = L.marker([data[row].lat, data[row].lon]);
 	    }
@@ -231,7 +231,7 @@ function getColor(type) {
 
 map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
-    var radius = 1000000;
+    var radius = e.accuracy;
     //e.accuracy
   var mycoordinates = e.latlng;
 
