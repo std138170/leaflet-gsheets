@@ -235,6 +235,12 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map);
 }
+function onLocationError(e) {
+    alert("Location permission denied");
+}
+
+map.on('locationerror', onLocationError);
+
 var Colosseum  = L.marker([41.890209, 12.492231]).bindPopup("Κολοσαίο");
 Colosseum.addTo(map);
 
