@@ -227,7 +227,7 @@ function getColor(type) {
 
 map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
-    var radius = 100;
+    var radius = 10000000000000000;
     //e.accuracy
   var mycoordinates = e.latlng;
 
