@@ -1,4 +1,4 @@
-/* global L Tabletop */
+/* global L Tabletop */ 
 
 /*
  * Script to display two tables from Google Sheets as point and polygon layers using Leaflet
