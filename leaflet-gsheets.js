@@ -152,7 +152,7 @@ function addPoints(data) {
  
   //////XXXXXXXXXXXXXXXXX
   var myIcon = L.icon({
-    iconUrl: 'leaf-green.png',
+    iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png',
     //shadowUrl: 'leaf-shadow.png',
 
     iconSize:     [38, 95], // size of the icon
