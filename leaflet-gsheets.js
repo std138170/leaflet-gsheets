@@ -248,7 +248,7 @@ map.on('locationfound', onLocationFound);
         addMarker(coords);
     }
     
-    map.on("click", onMapClick);
+    map.on('click', onMapClick);
     function addMarker(coordinates)
     {
       
