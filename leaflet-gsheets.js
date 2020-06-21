@@ -231,7 +231,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -249,8 +249,8 @@ var myIcon = L.icon({
 
 var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!");
 Colosseum.addTo(map);
-L.marker([39.3812, 22.253]).addTo(map);
-//,{icon: myIcon}
+L.marker([39.3812, 22.253],{icon: myIcon}).addTo(map);
+//
 
 map.on('locationfound', onLocationFound);
 
