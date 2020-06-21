@@ -259,5 +259,14 @@ function onMapClick(e) {
 
 mymap.on('click', onMapClick);
 
+var overlays = 
+        {
+            "Όλες οι πινέζες": allMarkers,
+            "Η τοποθεσία μου": myloc,
+            "Πινέζες κοντά μου": MarkersNearMe,
+            "Αξιοθέατα": Sights
+	};
+                L.control.layers(overlays, null).addTo(map);
+
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
