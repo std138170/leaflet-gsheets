@@ -278,7 +278,7 @@ var overlays =
             "Πινέζες κοντά μου": MarkersNearMe,
             "Αξιοθέατα": Sights
 	};
-                L.control.layers(overlays, null).addTo(map);
+                L.control.layers(baseLayers, overlays).addTo(map);
 
  function getDistance(origin, destination) 
     {
