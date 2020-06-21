@@ -247,9 +247,9 @@ var myIcon = L.icon({
         shadowAnchor: [22, 94]
         });
 
-var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
-Colosseum.addTo(map);
-L.marker([39.3812, 22.253],{icon: myIcon}).addTo(map);
+//var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
+//Colosseum.addTo(map);
+//L.marker([39.3812, 22.253],{icon: myIcon}).addTo(map);
 //
 
 map.on('locationfound', onLocationFound);
