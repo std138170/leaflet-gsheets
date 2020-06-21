@@ -241,13 +241,13 @@ function onLocationError(e) {
 
 map.on('locationerror', onLocationError);
 var myIcon = L.icon({
-	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
+	iconUrl: 'https://drive.google.com/file/d/1_yDB5SKXq7Ix2yYgI8K9WALVF_7BCFga/view?usp=sharing',
         iconSize: [30, 40],
         shadowSize: [68, 95],
         shadowAnchor: [22, 94]
         });
 
-var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!");
+var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
 Colosseum.addTo(map);
 L.marker([39.3812, 22.253],{icon: myIcon}).addTo(map);
 //
