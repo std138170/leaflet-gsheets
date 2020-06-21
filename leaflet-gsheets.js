@@ -152,10 +152,10 @@ function addPoints(data) {
  
   //////XXXXXXXXXXXXXXXXX
   var myIcon = L.icon({
-    iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png',
+    iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png'});
     //shadowUrl: 'leaf-shadow.png',
 
-    iconSize:     [38, 95] }); // size of the icon
+    //iconSize: [38, 95] }); // size of the icon
    // shadowSize:   [50, 64], // size of the shadow
   //  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     //shadowAnchor: [4, 62],  // the same for the shadow
@@ -171,7 +171,7 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-      marker = L.marker([data[row].lat, data[row].lon]);
+      marker = L.marker([data[row].lat, data[row].lon], {icon: myIcon});
     }
     marker.addTo(pointGroupLayer);
 
