@@ -39,7 +39,7 @@ var sidebar = L.control
   .sidebar({
     container: "sidebar",
     closeButton: true,
-    position: "bottom"
+    position: "right"
   })
   .addTo(map);
 
