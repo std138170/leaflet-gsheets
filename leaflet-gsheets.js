@@ -238,7 +238,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are!! " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -274,7 +274,7 @@ function onMapClick(e) {
 mymap.on('click', onMapClick);
 
 
-var mydistance = getDistance([37, -120], [39, -100])
+var mydistance = getDistance([37, -120], [39, -100]);
  function getDistance(origin, destination) 
     {
 	//return distance in meters
