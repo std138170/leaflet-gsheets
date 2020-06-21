@@ -235,7 +235,7 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map);
 }
-var Colosseum  = L.marker([41.890209, 12.492231]).bindPopup("Κολοσαίο!");
+var Colosseum  = L.marker([41.890209, 12.492231]).bindPopup("Κολοσαίο");
 Colosseum.addTo(map);
 
 map.on('locationfound', onLocationFound);
@@ -248,7 +248,7 @@ map.on('locationfound', onLocationFound);
         addMarker(coords);
     }
     
-    map.on('click', onMapClick);
+    map.on("click", onMapClick);
     function addMarker(coordinates)
     {
       
