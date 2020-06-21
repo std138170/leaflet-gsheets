@@ -182,7 +182,7 @@ function addPoints(data) {
     marker.addTo(pointGroupLayer);
 
     // UNCOMMENT THIS LINE TO USE POPUPS
-    //marker.bindPopup('<h2>' + data[row].location + '</h2>There's a ' + data[row].level + ' ' + data[row].category + ' here');
+    marker.bindPopup('<h2>' + data[row].location + '</h2>There's a ' + data[row].level + ' ' + data[row].category + ' here');
 
     // COMMENT THE NEXT 14 LINES TO DISABLE SIDEBAR FOR THE MARKERS
     marker.feature = {
@@ -266,7 +266,7 @@ map.on('locationfound', onLocationFound);
 //var mydistance = getDistance([37, -120], [39, -100]);
  function getDistance(origin, destination) 
     {
-alert("Test 3 ");
+alert("Μεσα στη συναρτηση ");
 	//return distance in meters
         var lon1 = toRadian(origin[1]),
         lat1 = toRadian(origin[0]),
