@@ -149,6 +149,20 @@ function addPoints(data) {
   // Wil be in pixels for circleMarker, metres for circle
   // Ignore for point
   var markerRadius = 100;
+ 
+  //////XXXXXXXXXXXXXXXXX
+  var myIcon = L.icon({
+    iconUrl: 'leaf-green.png',
+    //shadowUrl: 'leaf-shadow.png',
+
+    iconSize:     [38, 95], // size of the icon
+   // shadowSize:   [50, 64], // size of the shadow
+  //  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+   // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+  
+  ///////XXXXXXXXXXXXXXXXx
 
   for (var row = 0; row < data.length; row++) {
     var marker;
@@ -157,7 +171,7 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-      marker = L.marker([data[row].lat, data[row].lon]);
+      marker = L.marker([data[row].lat, data[row].lon], {icon: myIcon});
     }
     marker.addTo(pointGroupLayer);
 
