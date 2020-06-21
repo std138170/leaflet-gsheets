@@ -173,11 +173,11 @@ function addPoints(data) {
     } else {
 	   var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
 	    alert("Έξω από το if");
-	   if (distance < 1 )
-	    {
-		    alert("Μέσα στο if");
+	  // if (distance < 1 )
+	//    {
+		//    alert("Μέσα στο if");
      		 marker = L.marker([data[row].lat, data[row].lon]);
-	    }
+	  //  }
     }
     marker.addTo(pointGroupLayer);
 
