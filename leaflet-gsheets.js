@@ -225,7 +225,7 @@ function getColor(type) {
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 
-map.locate({setView: true, maxZoom: 16});
+//map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
     var radius = e.accuracy;
 
