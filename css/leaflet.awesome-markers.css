@@ -6,7 +6,7 @@ Version: 1.0
 
 /* Marker setup */
 .awesome-marker {
-  background: url('images/marker-icon-2x.png') no-repeat 0 0;
+  background: url('images/myicon.png') no-repeat 0 0;
   width: 35px;
   height: 46px;
   position:absolute;
