@@ -285,6 +285,6 @@ function toRadian(degree)
     {
         return degree*Math.PI/180;
     }
-alert("Test 4 ");
+alert("Test 4 " +mydistance);
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
