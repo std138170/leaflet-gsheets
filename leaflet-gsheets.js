@@ -241,7 +241,7 @@ function onLocationError(e) {
 
 map.on('locationerror', onLocationError);
 var myIcon = L.icon({
-	iconUrl: 'https://drive.google.com/file/d/1_yDB5SKXq7Ix2yYgI8K9WALVF_7BCFga/view?usp=sharing',
+	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
         iconSize: [30, 40],
         shadowSize: [68, 95],
         shadowAnchor: [22, 94]
