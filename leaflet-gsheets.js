@@ -228,9 +228,10 @@ function getColor(type) {
 map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
     var radius = e.accuracy;
+  var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + e.latlng).openPopup();
+        .bindPopup("Your coordinates are!!!! " + mycoordinates).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
