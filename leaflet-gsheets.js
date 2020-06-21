@@ -240,11 +240,20 @@ Colosseum.addTo(map);
 
 map.on('locationfound', onLocationFound);
 
- function onMapClick(e) 
+	
+    function onMapClick(e) 
     {
         popup.setLatLng(e.latlng);
         var coords = e.latlng;
         addMarker(coords);
+    }
+    
+    map.on('click', onMapClick);
+    function addMarker(coordinates)
+    {
+      
+      var newClickCoords = L.marker([coordinates.lat,coordinates.lng]).bindPopup("New").addTo(map);
+        
     }
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
