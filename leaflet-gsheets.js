@@ -240,7 +240,7 @@ function onLocationError(e) {
 }
 
 map.on('locationerror', onLocationError);
-var myIcon = L.icon({iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/myicon.png'});
+var myIcon = L.icon({iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png'});
 
 var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!");
 Colosseum.addTo(map);
