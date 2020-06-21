@@ -227,12 +227,12 @@ function getColor(type) {
 
 map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
-    var radius = 10000000000;
+    var radius = 10000;
     //e.accuracy
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
