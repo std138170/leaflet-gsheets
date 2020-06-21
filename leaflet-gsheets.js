@@ -238,14 +238,14 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
 function onLocationError(e) {
     alert("Location permission denied");
 }
-
+alert("Test 1 ");
 map.on('locationerror', onLocationError);
 var myIcon = L.icon({
 	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
@@ -262,21 +262,11 @@ var myIcon = L.icon({
 map.on('locationfound', onLocationFound);
 
 	
-  var popup = L.popup();
- 
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-}
-
-mymap.on('click', onMapClick);
-
-
+alert("Test   2  ");
 var mydistance = getDistance([37, -120], [39, -100]);
  function getDistance(origin, destination) 
     {
+alert("Test 3 ");
 	//return distance in meters
         var lon1 = toRadian(origin[1]),
         lat1 = toRadian(origin[0]),
@@ -295,6 +285,6 @@ function toRadian(degree)
     {
         return degree*Math.PI/180;
     }
-alert("Test  ");
+alert("Test 4 ");
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
