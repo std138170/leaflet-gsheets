@@ -39,7 +39,7 @@ var sidebar = L.control
   .sidebar({
     container: "sidebar",
     closeButton: true,
-    position: "right"
+    position: "bottom"
   })
   .addTo(map);
 
@@ -231,7 +231,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
