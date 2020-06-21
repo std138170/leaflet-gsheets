@@ -173,11 +173,11 @@ alert("Ασχετο");
     } else {
 	    var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
 	    alert("Έξω από το if");
-	    if (distance < 10000000000000000000000000000000000000000000000 )
-	    {
+	  //  if (distance < 10000000000000000000000000000000000000000000000 )
+	  //  {
 		    alert("Μέσα στο if");
      		 marker = L.marker([data[row].lat, data[row].lon]);
-	    }
+	    //}
     }
     marker.addTo(pointGroupLayer);
 
@@ -238,7 +238,7 @@ function onLocationFound(e) {
   var mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
