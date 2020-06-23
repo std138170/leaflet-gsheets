@@ -164,7 +164,7 @@ function addPoints(data) {
   
   ///////XXXXXXXXXXXXXXXXx
 //alert("Ασχετο");
-	var x=0;
+	var xi=0;
   for (var row = 0; row < data.length; row++) {
     var marker;
     if (markerType == "circleMarker") {
@@ -173,11 +173,11 @@ function addPoints(data) {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
 	  // var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	    x=x+1;
-	    alert("Έξω από το if" +x);
+	    xi=xi+1;
+	    alert("Έξω από το if" +xi);
 	  // if (distance < 1 )
 	//    {
-		    alert("Μέσα στο if" +x);
+		    alert("Μέσα στο if" +xi);
      		 marker = L.marker([data[row].lat, data[row].lon]);
 	  //  }
     }
