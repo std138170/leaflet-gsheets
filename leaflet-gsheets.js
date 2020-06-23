@@ -59,6 +59,7 @@ map.on("click", function() {
 // These are declared outisde the functions so that the functions can check if they already exist
 var polygonLayer;
 var pointGroupLayer;
+var mycoordinates;
 
 // The form of data must be a JSON representation of a table as returned by Tabletop.js
 // addPolygons first checks if the map layer has already been assigned, and if so, deletes it and makes a fresh one
@@ -238,10 +239,10 @@ map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
     var radius = e.accuracy;
     //e.accuracy
-  var mycoordinates = e.latlng;
+  mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
