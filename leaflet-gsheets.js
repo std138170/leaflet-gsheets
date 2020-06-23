@@ -173,13 +173,13 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	  var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	    xi=xi+1;
-	    alert("Έξω από το if" +xi);
-	     alert("Distance    " +distance);
+	//  var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
+	  //  xi=xi+1;
+	  //  alert("Έξω από το if" +xi);
+	  //   alert("Distance    " +distance);
 	  // if (distance < 1 )
 	//    {
-		    alert("Μέσα στο if" +xi);
+		  //  alert("Μέσα στο if" +xi);
      		 marker = L.marker([data[row].lat, data[row].lon]);
 	  //  }
     }
@@ -242,7 +242,7 @@ function onLocationFound(e) {
   mycoordinates = e.latlng;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycoordinates.lat).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
