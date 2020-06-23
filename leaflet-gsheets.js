@@ -171,7 +171,7 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	   var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
+	  // var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
 	    alert("Έξω από το if");
 	  // if (distance < 1 )
 	//    {
