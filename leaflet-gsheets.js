@@ -173,8 +173,8 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	    var distance = toRadian(data[row].lat);
-	//  var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
+	   // var distance = toRadian(data[row].lat);
+	 var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
 	    xi=xi+1;
 	  //  alert("Έξω από το if" +xi);
 	   alert("Distance    " +distance);
@@ -250,7 +250,7 @@ var mycords = toRadian(mycoordinates.lat);
 function onLocationError(e) {
     alert("Location permission denied");
 }
-alert("Test 1 ");
+//alert("Test 1 ");
 map.on('locationerror', onLocationError);
 var myIcon = L.icon({
 	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
