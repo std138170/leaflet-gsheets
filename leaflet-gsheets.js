@@ -240,9 +240,9 @@ function onLocationFound(e) {
     var radius = e.accuracy;
     //e.accuracy
   mycoordinates = e.latlng;
-
+var mycords = toRadian(mycoordinates.lat);
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycoordinates.lat).openPopup();
+        .bindPopup("Your coordinates are " + mycords).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
