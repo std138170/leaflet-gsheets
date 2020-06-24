@@ -243,7 +243,7 @@ function onLocationFound(e) {
   mycoordinates = e.latlng;
 var mycords = toRadian(mycoordinates.lat);
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are!!! " + mycords).openPopup();
+        .bindPopup("Your coordinates are " + mycords).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
