@@ -243,7 +243,7 @@ function onLocationFound(e) {
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Your coordinates are " + mycords).openPopup();
+        .bindPopup("Your coordinates are!!! " + mycords).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -252,12 +252,12 @@ function onLocationError(e) {
 }
 //alert("Test 1 ");
 map.on('locationerror', onLocationError);
-var myIcon = L.icon({
-	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
-        iconSize: [30, 40],
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-        });
+//var myIcon = L.icon({
+	//iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
+     //   iconSize: [30, 40],
+     //   shadowSize: [68, 95],
+     //   shadowAnchor: [22, 94]
+     //   });
 
 //var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
 //Colosseum.addTo(map);
