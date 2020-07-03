@@ -24,14 +24,7 @@ window.addEventListener("DOMContentLoaded", init);
 // Create a new Leaflet map centered on the continental US
 var map = L.map("map").setView([40, -100], 4);
 
-var overlays = 
-        {
-            "Όλες οι πινέζες": allMarkers,
-            "Η τοποθεσία μου": myloc,
-            "Πινέζες κοντά μου": MarkersNearMe,
-            "Αξιοθέατα": Sights
-	};
-                L.control.layers(overlays, null).addTo(map);
+
 
 // This is the Carto Positron basemap
 var basemap = L.tileLayer(
@@ -254,7 +247,7 @@ function onLocationFound(e) {
     //e.accuracy
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!!! " + mycoordinates).openPopup();
+    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are " + mycoordinates).openPopup();
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
