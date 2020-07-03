@@ -238,7 +238,7 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 1 ");
+alert("Test 2 ");
 //document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
 map.locate({setView: true, maxZoom: 16});
@@ -262,7 +262,7 @@ map.on('locationerror', onLocationError);
 var myIcon = L.icon({
 	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/a.png',
         iconSize: [30, 40],
-	 iconColor: "black",
+	 iconColor: "red",
        shadowSize: [68, 95],
        shadowAnchor: [22, 94]
        });
