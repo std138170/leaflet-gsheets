@@ -262,6 +262,7 @@ map.on('locationerror', onLocationError);
 var myIcon = L.icon({
 	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/a.png',
         iconSize: [30, 40],
+	 iconColor: "black",
        shadowSize: [68, 95],
        shadowAnchor: [22, 94]
        });
