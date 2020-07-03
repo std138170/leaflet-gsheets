@@ -238,7 +238,7 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 3 ");
+alert("Test 4 ");
 //document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
 map.locate({setView: true, maxZoom: 16});
