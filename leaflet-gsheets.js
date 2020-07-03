@@ -238,8 +238,8 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧχ
-
- 
+document.getElementById ("locate").addEventListener ("click", handleCommand, false);
+function handleCommand() { 
 map.locate({setView: true, maxZoom: 16});
 function onLocationFound(e) {
 	//alert("Test 1 ");
@@ -247,11 +247,11 @@ function onLocationFound(e) {
     //e.accuracy
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are " + mycoordinates).openPopup();
+    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!! " + mycoordinates).openPopup();
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
- 
+}
 function onLocationError(e) {
     alert("Location permission denied");
 }
