@@ -6,7 +6,7 @@
  */
 
 // init() is called as soon as the page loads
-document.getElementById ("locate").addEventListener ("click", handleCommand, false);
+document.getElementById ("locate");
 function init() {
   // PASTE YOUR URLs HERE
   // these URLs come from Google Sheets 'shareable link' form
@@ -244,7 +244,7 @@ function onLocationFound(e) {
     //e.accuracy
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are " + mycoordinates).openPopup();
+    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!! " + mycoordinates).openPopup();
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
