@@ -238,7 +238,7 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 1 ");
+alert("Test 3 ");
 //document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
 map.locate({setView: true, maxZoom: 16});
@@ -298,7 +298,7 @@ function addMarker(coordinates)
     {
        
             var text = window.prompt("Πληκτρολόγησε σχόλια για τη πινέζα");
-	     L.marker(coordinates,{icon: greenIcon}).addTo(map).bindPopup("  " + text).openPopup();
+	     L.marker(coordinates).addTo(map).bindPopup("  " + text).openPopup();
             
                 
        
