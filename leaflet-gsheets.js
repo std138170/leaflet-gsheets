@@ -6,6 +6,7 @@
  */
 
 // init() is called as soon as the page loads
+document.getElementById ("locate").addEventListener ("click", handleCommand, false);
 function init() {
   // PASTE YOUR URLs HERE
   // these URLs come from Google Sheets 'shareable link' form
