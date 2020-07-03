@@ -241,6 +241,7 @@ function getColor(type) {
 document.getElementById ("locate").addEventListener ("click", handleCommand, false);
 function handleCommand() { 
 map.locate({setView: true, maxZoom: 16});
+	alert("Test 2 ");
 function onLocationFound(e) {
 	//alert("Test 1 ");
     var radius = e.accuracy;
