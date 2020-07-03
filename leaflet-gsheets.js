@@ -238,13 +238,13 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 3 ");
-document.getElementById ("locate").addEventListener ("click", handleCommand, false);
-function handleCommand() { 
+alert("Test 4 ");
+document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
+
 map.locate({setView: true, maxZoom: 16});
-	alert("Test 2 ");
+	
 function onLocationFound(e) {
-	//alert("Test 1 ");
+	alert("Test 1 ");
     var radius = e.accuracy;
     //e.accuracy
   mycoordinates = e.latlng;
@@ -253,7 +253,7 @@ function onLocationFound(e) {
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
-}
+
 function onLocationError(e) {
     alert("Location permission denied");
 }
