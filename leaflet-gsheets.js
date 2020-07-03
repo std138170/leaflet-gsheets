@@ -276,12 +276,25 @@ map.on('click', onMapClick);
 var popup = L.popup();
 
 function onMapClick(e) {
-    popup
+   /* popup
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
        .openOn(map);
+       */
+	popup.setLatLng(e.latlng);
+        var coords = e.latlng;
+        addMarker(coords);
 }
 
+function addMarker(coordinates)
+    {
+       
+            var text = window.prompt("Πληκτρολόγησε σχόλια για τη πινέζα");
+	     L.marker(coordinates).addTo(map).bindPopup("  " + text).openPopup();
+            
+                
+       
+    }
 
 //**********************************************
 
