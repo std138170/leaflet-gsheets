@@ -238,13 +238,13 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 1 ");
+
 //document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
 map.locate({setView: true, maxZoom: 16});
 	
 function onLocationFound(e) {
-	alert("Test 1 ");
+	alert("Test 5 ");
     var radius = e.accuracy;
     //e.accuracy
   mycoordinates = e.latlng;
@@ -259,12 +259,12 @@ function onLocationError(e) {
 }
 //alert("Test 1 ");
 map.on('locationerror', onLocationError);
-//var myIcon = L.icon({
-	//iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/myicon.png',
-     //   iconSize: [30, 40],
-     //   shadowSize: [68, 95],
-     //   shadowAnchor: [22, 94]
-     //   });
+var myIcon = L.icon({
+	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/a.png',
+        iconSize: [30, 40],
+       shadowSize: [68, 95],
+       shadowAnchor: [22, 94]
+       });
 
 //var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
 //Colosseum.addTo(map);
@@ -297,7 +297,7 @@ function addMarker(coordinates)
     {
        
             var text = window.prompt("Πληκτρολόγησε σχόλια για τη πινέζα");
-	     L.marker(coordinates).addTo(map).bindPopup("  " + text).openPopup();
+	     L.marker(coordinates,{icon: myIcon}).addTo(map).bindPopup("  " + text).openPopup();
             
                 
        
