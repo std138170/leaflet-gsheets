@@ -243,7 +243,7 @@ function onLocationFound(e) {
     //e.accuracy
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!! " + mycoordinates).openPopup();
+    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are " + mycoordinates).openPopup();
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
@@ -272,16 +272,17 @@ map.on('locationfound', onLocationFound);
 
 
 //**********************************************
-//var popup = L.popup();
+map.on('click', onMapClick);
+var popup = L.popup();
 
-//function onMapClick(e) {
-   // popup
-      //  .setLatLng(e.latlng)
-      //  .setContent("You clicked the map at " + e.latlng.toString())
-      //  .openOn(mymap);
-//}
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+       .openOn(map);
+}
 
-//map.on('click', onMapClick);
+
 //**********************************************
 
  function getDistance(origin, destination) 
