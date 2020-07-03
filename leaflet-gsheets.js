@@ -238,13 +238,13 @@ function getColor(type) {
   }
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-
+alert("Test 1 ");
 //document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
 map.locate({setView: true, maxZoom: 16});
 	
 function onLocationFound(e) {
-	alert("Test 5 ");
+	
     var radius = e.accuracy;
     //e.accuracy
   mycoordinates = e.latlng;
