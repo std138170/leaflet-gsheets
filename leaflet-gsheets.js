@@ -243,7 +243,7 @@ function onLocationFound(e) {
     //e.accuracy
   mycoordinates = e.latlng;
 //var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are " + mycoordinates).openPopup();
+    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!! " + mycoordinates).openPopup();
     L.circle(e.latlng, radius).addTo(map);
 	//alert("Test 2 ");
 }
