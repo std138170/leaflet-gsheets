@@ -269,16 +269,20 @@ map.on('locationfound', onLocationFound);
 	
 //alert("Test   2  ");
 //var mydistance = getDistance([37, -120], [39, -100]);
-var popup = L.popup();
 
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-}
 
-map.on('click', onMapClick);
+//**********************************************
+//var popup = L.popup();
+
+//function onMapClick(e) {
+   // popup
+      //  .setLatLng(e.latlng)
+      //  .setContent("You clicked the map at " + e.latlng.toString())
+      //  .openOn(mymap);
+//}
+
+//map.on('click', onMapClick);
+//**********************************************
 
  function getDistance(origin, destination) 
     {
