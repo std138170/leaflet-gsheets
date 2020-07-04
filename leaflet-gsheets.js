@@ -153,22 +153,8 @@ function addPoints(data) {
   // Wil be in pixels for circleMarker, metres for circle
   // Ignore for point
   var markerRadius = 100;
- 
-  //////XXXXXXXXXXXXXXXXX
- // var myIcon = L.icon({
-    //iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/myicon.png'});
-    //shadowUrl: 'leaf-shadow.png',
 
-    //iconSize: [38, 95] }); // size of the icon
-   // shadowSize:   [50, 64], // size of the shadow
-  //  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    //shadowAnchor: [4, 62],  // the same for the shadow
-   // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-//});
-  
-  ///////XXXXXXXXXXXXXXXXx
-//alert("Ασχετο");
-	//var xi=0;
+
   for (var row = 0; row < data.length; row++) {
     var marker;
     if (markerType == "circleMarker") {
@@ -176,16 +162,9 @@ function addPoints(data) {
     } else if (markerType == "circle") {
       marker = L.circle([data[row].lat, data[row].lon], {radius: markerRadius});
     } else {
-	   // var distance = toRadian(data[row].lat);
-	// var distance = getDistance([data[row].lat, data[row].lon], [mycoordinates.lat, mycoordinates.lon]);
-	   // xi=xi+1;
-	  //  alert("Έξω από το if" +xi);
-	  // alert("Distance    " +distance);
-	// if (distance < 1 )
-	//    {
-		//  alert("Μέσα στο if" +xi);
+	 		
      		 marker = L.marker([data[row].lat, data[row].lon]);
-	  //  }
+	  
     }
     marker.addTo(pointGroupLayer);
 
@@ -212,7 +191,6 @@ function addPoints(data) {
 
     // AwesomeMarkers is used to create fancier icons
     var icon = L.AwesomeMarkers.icon({
-     // iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/marker-icon.png',
       icon: "info-sign", 
       iconColor: "white",
       markerColor: getColor(data[row].category),
@@ -237,74 +215,8 @@ function getColor(type) {
     return "green";
   }
 }
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ3ΧΧΧχ
-alert("Test 1 ");
-//document.getElementById ("locate").addEventListener ("click", onLocationFound, false);
 
-map.locate({setView: true, maxZoom: 16});
-	
-function onLocationFound(e) {
-	
-    var radius = e.accuracy;
-    //e.accuracy
-  mycoordinates = e.latlng;
-//var mycords = toRadian(mycoordinates.lat);
-    L.marker(e.latlng).addTo(map).bindPopup("Your coordinates are!!! " + mycoordinates).openPopup();
-    L.circle(e.latlng, radius).addTo(map);
-	//alert("Test 2 ");
-}
-
-function onLocationError(e) {
-    alert("Location permission denied");
-}
-//alert("Test 1 ");
-map.on('locationerror', onLocationError);
-var myIcon = L.icon({
-	iconUrl: 'https://github.com/std138170/leaflet-gsheets/blob/master/css/images/a.png',
-        iconSize: [30, 40],
-	 iconColor: "red",
-       shadowSize: [68, 95],
-       shadowAnchor: [22, 94]
-       });
-
-//var Colosseum  = L.marker([41.890209, 12.492231], {icon: myIcon}).bindPopup("Κολοσαίο!!!!!");
-//Colosseum.addTo(map);
-//L.marker([39.3812, 22.253],{icon: myIcon}).addTo(map);
-//
-
-map.on('locationfound', onLocationFound);
-
-	
-//alert("Test   2  ");
-//var mydistance = getDistance([37, -120], [39, -100]);
-
-
-//**********************************************
-map.on('click', onMapClick);
-var popup = L.popup();
-
-function onMapClick(e) {
-   /* popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-       .openOn(map);
-       */
-	popup.setLatLng(e.latlng);
-        var coords = e.latlng;
-        addMarker(coords);
-}
-
-function addMarker(coordinates)
-    {
-       
-            var text = window.prompt("Πληκτρολόγησε σχόλια για τη πινέζα");
-	     L.marker(coordinates).addTo(map).bindPopup("  " + text).openPopup();
-            
-                
-       
-    }
-
-//**********************************************
+//*************************************************************************************
 
  function getDistance(origin, destination) 
     {
@@ -333,6 +245,4 @@ function toRadian(degree)
     {
         return degree*Math.PI/180;
     }
-//alert("Test 4 " +mydistance);
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+  alert("1");
